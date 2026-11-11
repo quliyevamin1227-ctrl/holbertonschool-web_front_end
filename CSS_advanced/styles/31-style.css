@@ -56,7 +56,9 @@
   --header-logo-link-left: 0;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -83,20 +85,20 @@ h6 {
   font-weight: var(--font-weight-bold);
 }
 
-a[href] {
+a:link {
   color: var(--text-color);
   text-decoration: none;
 }
 
-a[href]:visited {
+a:visited {
   font-style: italic;
 }
 
-a[href]:hover {
+a:hover {
   text-decoration: underline;
 }
 
-a[href]:active {
+a:active {
   background-color: var(--color-light-grey);
 }
 
@@ -159,7 +161,8 @@ a[href]:active {
 
 .container {
   width: 960px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
@@ -245,7 +248,7 @@ ul.row {
   display: block;
 }
 
-.social-link svg {
+.social-link > svg {
   fill: var(--text-color);
 }
 
